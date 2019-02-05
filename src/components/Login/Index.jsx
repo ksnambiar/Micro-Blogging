@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, Content, Button } from "react-bulma-components";
+import Loader from "../Loader/Loader";
 export default class Index extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,9 @@ export default class Index extends Component {
           <Card.Content>
             <Content>
               {loading ? (
-                <div>Loading......</div>
+                <div>
+                  <Loader />
+                </div>
               ) : (
                 <Button color="primary" onClick={this.handleSignIn}>
                   Sign In
